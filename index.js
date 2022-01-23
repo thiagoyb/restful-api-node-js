@@ -11,6 +11,15 @@ let server = http.createServer((req, res)=>{
             res.end('<h1>Bem-vindo ao Node!<h1>');
             break;
         }
+        case '/users':{
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({
+                'name' : 'Fulano Sauro',
+                'idade' : 22
+            }));
+            break;
+        }
     }
 });
 
