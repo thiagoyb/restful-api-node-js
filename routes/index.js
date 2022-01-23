@@ -1,11 +1,8 @@
-const express = require('express');
+module.exports = app =>{
+    app.get('/',(req, res)=>{
 
-let routes = express.Router();
-routes.get('/',(req, res)=>{
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.end('<h1>Bem-vindo ao Node!<h1>');
-});
-
-module.exports = routes;
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        res.end('<h1>Bem-vindo ao Node!<h1>');
+    });
+}
