@@ -5,13 +5,13 @@ module.exports = app =>{
         res.json({
             'name' : 'Fulano Sauro',
             'idade' : 29,
-            id: 1
+            'id': 1
         });
     });
-    
-    app.get('/users/admin',(req, res)=>{
+
+    app.post('/users',(req, res)=>{
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.json({});
-    })
+        res.json(req.body);
+    });
 }
