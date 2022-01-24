@@ -44,4 +44,17 @@ module.exports = app =>{
             }
         });
     });
+
+    routeId.put((req,res)=>{
+        res.setHeader('Content-Type', 'application/json');
+
+        db.update({ _id : req.params.id }, req.body, err=>{
+            if(err){
+                app.utils.error.send(err, req, res);
+            } else{
+                console.info('Alterado com sucesso!');
+                res.status(200).json(Object.assign(req.params, req.body));
+            }
+        });
+    });
 }
