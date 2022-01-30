@@ -14,7 +14,6 @@ module.exports = app =>{
             if(err){
                 app.utils.error.send(err, req, res);
             } else{
-                console.info('Cadastrado com Sucesso');
                 res.status(200).json(users);
             }
         });
@@ -27,6 +26,7 @@ module.exports = app =>{
             if(err){
                 app.utils.error.send(err, req, res);
             } else{
+                console.info('Cadastrado com Sucesso');
                 res.status(200).json(user);
             }
         });
@@ -54,6 +54,19 @@ module.exports = app =>{
             } else{
                 console.info('Alterado com sucesso!');
                 res.status(200).json(Object.assign(req.params, req.body));
+            }
+        });
+    });
+
+    routeId.delete((req,res)=>{
+        res.setHeader('Content-Type', 'application/json');
+
+        db.remove({ _id : req.params.id }, {}, err=>{
+            if(err){
+                app.utils.error.send(err, req, res);
+            } else{
+                console.info('Alterado com sucesso!');
+                res.status(200).json(req.params);
             }
         });
     });
