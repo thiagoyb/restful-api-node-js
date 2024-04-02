@@ -1,7 +1,5 @@
 # restful-api-node-js
 
-[![Hcode Treinamentos](https://lh6.googleusercontent.com/tdTQekk5w8aDs1F3HOw2u-kyQNjCPUKh2J40VMinrcMBCYjKJd2eW-wL6YvoRcj3MdN-_90ONSlijDRdj3fGMzGD5OEF2fyoSNw1WypXqUYVVYWrf6GLalezjDP8zGFCcnzNpGuS)](https://www.hcode.com.br)
-
 API de Restful com Node.js do Curso Completo de JavaScript na Udemy.com.
 
 ### Criação package.json
